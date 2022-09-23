@@ -40,7 +40,7 @@ def AppendReportStr(path, fileName):
         if random.randint(0, 10000) % 2 == 0:
             return ""
 
-    result += random.choice(strings).strip().replace("\\n", "\n")
+    result += random.choice(strings).strip().replace("\\n", "\n") + " "
     return result
 
 
