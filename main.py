@@ -32,7 +32,7 @@ def GetReport():
 def AppendReportStr(path, fileName):
     file = open(path + fileName, "r", encoding='utf8')
     fileNameSplit = fileName.split(".")
-    result = fileNameSplit[1] + "\n"
+    result = ""
     strings = file.readlines()
     file.close()
 
@@ -40,7 +40,7 @@ def AppendReportStr(path, fileName):
         if random.randint(0, 10000) % 2 == 0:
             return ""
 
-    result += random.choice(strings).strip().replace("\\n", "\n") + "\n\n"
+    result += random.choice(strings).strip().replace("\\n", "\n")
     return result
 
 
